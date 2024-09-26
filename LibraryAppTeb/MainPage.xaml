@@ -1,12 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="LibraryAppTeb.MainPage">
-<HorizontalStackLayout Margin="35" Spacing="20">
+             x:Class="LibraryAppTeb.MainPage"
+             BackgroundColor="#14213D">
+<HorizontalStackLayout Margin="35" Spacing="40">
 
-   <VerticalStackLayout>
-      <Label Text="Dostępne u nas książki" FontSize="23"/>
-      <Grid ColumnDefinitions=".1*,.6*,1*" RowDefinitions="*,*,*,*" ColumnSpacing="30">
+   <VerticalStackLayout >
+            <Label Text="Dostępne u nas książki" FontSize="23" Margin="0,0,0,30"/>
+      <Grid ColumnDefinitions=".1*,.6*,1*" RowDefinitions="*,*,*,*" ColumnSpacing="20">
         <!--Wiersz 1 (Header) -->
         <Label Text="ID" FontAttributes="Bold"/>
         <Label Text="Tytuł" Grid.Column="1" FontAttributes="Bold"/>
@@ -30,7 +31,15 @@
    </VerticalStackLayout>
 
     <VerticalStackLayout>
-        <Label Text="Wypożycz książkę" FontSize="23"/> 
+        <Grid RowDefinitions="*,*,*" RowSpacing="20">
+
+        <Label Text="Wypożycz książkę" FontSize="23" /> 
+        <Entry Placeholder="Podaj ID książki" Grid.Row="1"/>
+        <Button Grid.Row="2"
+                Text="Wypożycz" HorizontalOptions="End"/>
+
+
+        </Grid>
     </VerticalStackLayout>
 </HorizontalStackLayout>
 
