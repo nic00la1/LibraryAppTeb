@@ -2,9 +2,36 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LibraryAppTeb.MainPage">
+<HorizontalStackLayout Margin="35" Spacing="20">
 
    <VerticalStackLayout>
-       <RoundRectangle>
-       </RoundRectangle>
+      <Label Text="Dostępne u nas książki" FontSize="23"/>
+      <Grid ColumnDefinitions=".1*,.6*,1*" RowDefinitions="*,*,*,*" ColumnSpacing="30">
+        <!--Wiersz 1 (Header) -->
+        <Label Text="ID" FontAttributes="Bold"/>
+        <Label Text="Tytuł" Grid.Column="1" FontAttributes="Bold"/>
+        <Label Text="Dostępna ilość" Grid.Column="2" FontAttributes="Bold"/>
+
+        <!--Wiersz 2-->
+        <Label Text="1" Grid.Row="1"/>
+        <Label Text="Potop - Henryk Sienkiewicz" Grid.Column="1" Grid.Row="1"/>
+        <Label Text="2" Grid.Column="2" Grid.Row="1"/>
+        
+        <!--Wiersz 3-->
+        <Label Text="2" Grid.Row="2"/>
+        <Label Text="Pan Tadeusz - Adam Mickiewicz" Grid.Column="1" Grid.Row="2"/>
+        <Label Text="1" Grid.Column="2" Grid.Row="2"/>
+        
+        <!--Wiersz 4-->
+        <Label Text="3" Grid.Row="3"/>
+        <Label Text="Zbrodnia i Kara - Fiodor Dostojewski" Grid.Column="1" Grid.Row="3"/>
+        <Label Text="1" Grid.Column="2" Grid.Row="3"/>
+        </Grid>
    </VerticalStackLayout>
+
+    <VerticalStackLayout>
+        <Label Text="Wypożycz książkę" FontSize="23"/> 
+    </VerticalStackLayout>
+</HorizontalStackLayout>
+
 </ContentPage>
