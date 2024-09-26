@@ -3,44 +3,71 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LibraryAppTeb.MainPage"
              BackgroundColor="#14213D">
-<HorizontalStackLayout Margin="35" Spacing="40">
 
-   <VerticalStackLayout >
-            <Label Text="Dostępne u nas książki" FontSize="23" Margin="0,0,0,30"/>
-      <Grid ColumnDefinitions=".1*,.6*,1*" RowDefinitions="*,*,*,*" ColumnSpacing="20">
-        <!--Wiersz 1 (Header) -->
-        <Label Text="ID" FontAttributes="Bold"/>
-        <Label Text="Tytuł" Grid.Column="1" FontAttributes="Bold"/>
-        <Label Text="Dostępna ilość" Grid.Column="2" FontAttributes="Bold"/>
+    <Grid Margin="35" ColumnDefinitions="*,*" ColumnSpacing="30">
 
-        <!--Wiersz 2-->
-        <Label Text="1" Grid.Row="1"/>
-        <Label Text="Potop - Henryk Sienkiewicz" Grid.Column="1" Grid.Row="1"/>
-        <Label Text="2" Grid.Column="2" Grid.Row="1"/>
-        
-        <!--Wiersz 3-->
-        <Label Text="2" Grid.Row="2"/>
-        <Label Text="Pan Tadeusz - Adam Mickiewicz" Grid.Column="1" Grid.Row="2"/>
-        <Label Text="1" Grid.Column="2" Grid.Row="2"/>
-        
-        <!--Wiersz 4-->
-        <Label Text="3" Grid.Row="3"/>
-        <Label Text="Zbrodnia i Kara - Fiodor Dostojewski" Grid.Column="1" Grid.Row="3"/>
-        <Label Text="1" Grid.Column="2" Grid.Row="3"/>
+        <Frame BorderColor="#FCA311" BackgroundColor="#14213D" CornerRadius="5"
+               >
+        <VerticalStackLayout>
+            <Label Text="Dostępne u nas książki" FontSize="18" Margin="0,0,0,30"/>
+            <Grid ColumnDefinitions=".1*,.6*,1*" RowDefinitions="*,*,*,*" ColumnSpacing="20">
+                <!--Wiersz 1 (Header) -->
+                <Label Text="ID" FontAttributes="Bold"/>
+                <Label Text="Tytuł" Grid.Column="1" FontAttributes="Bold"/>
+                <Label Text="Dostępna ilość" Grid.Column="2" FontAttributes="Bold"/>
+
+                <!--Wiersz 2-->
+                <Label Text="1" Grid.Row="1"/>
+                <Label Text="Potop - Henryk Sienkiewicz" Grid.Column="1" Grid.Row="1"/>
+                <Label Text="2" Grid.Column="2" Grid.Row="1"/>
+
+                <!--Wiersz 3-->
+                <Label Text="2" Grid.Row="2"/>
+                <Label Text="Pan Tadeusz - Adam Mickiewicz" Grid.Column="1" Grid.Row="2"/>
+                <Label Text="1" Grid.Column="2" Grid.Row="2"/>
+
+                <!--Wiersz 4-->
+                <Label Text="3" Grid.Row="3"/>
+                <Label Text="Zbrodnia i Kara - Fiodor Dostojewski" Grid.Column="1" Grid.Row="3"/>
+                <Label Text="1" Grid.Column="2" Grid.Row="3"/>
+            </Grid>
+        </VerticalStackLayout>
+    </Frame>
+
+
+        <Grid RowDefinitions="*,*" Grid.Column="1" RowSpacing="20">
+            <Frame BorderColor="#FCA311" BackgroundColor="#14213D" CornerRadius="5">
+                <VerticalStackLayout >
+                    <Grid RowDefinitions="*,*,*" RowSpacing="5">
+
+                        <Label Text="Wypożycz książkę" FontSize="18" />
+                        <Entry Placeholder="Podaj ID książki" Grid.Row="1"/>
+                        <Button Grid.Row="2"
+                                Text="Wypożycz" HorizontalOptions="End"/>
+
+
+                    </Grid>
+                </VerticalStackLayout>
+            </Frame>
+
+
+            <Frame BorderColor="#FCA311" BackgroundColor="#14213D" CornerRadius="5" Grid.Row="1">
+
+        <VerticalStackLayout>
+
+                <Grid RowDefinitions="*,*,*" RowSpacing="5">
+
+                    <Label Text="Oddaj książkę" FontSize="18" />
+                    <Entry Placeholder="Podaj ID książki" Grid.Row="1"/>
+                    <Button Grid.Row="2"
+                            Text="Wypożycz" HorizontalOptions="End"/>
+
+
+                </Grid>
+            </VerticalStackLayout>
+            </Frame>
         </Grid>
-   </VerticalStackLayout>
-
-    <VerticalStackLayout>
-        <Grid RowDefinitions="*,*,*" RowSpacing="20">
-
-        <Label Text="Wypożycz książkę" FontSize="23" /> 
-        <Entry Placeholder="Podaj ID książki" Grid.Row="1"/>
-        <Button Grid.Row="2"
-                Text="Wypożycz" HorizontalOptions="End"/>
-
-
-        </Grid>
-    </VerticalStackLayout>
-</HorizontalStackLayout>
+    
+    </Grid>
 
 </ContentPage>
