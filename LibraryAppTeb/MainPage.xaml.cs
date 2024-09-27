@@ -5,6 +5,15 @@
         public MainPage()
         {
             InitializeComponent();
+            if (BindingContext is MainPageViewModel viewModel)
+            {
+                viewModel.DisplayAlertRequested += OnDisplayAlertRequested;
+            }
+        }
+
+        private async void OnDisplayAlertRequested(string title, string message)
+        {
+            await DisplayAlert(title, message, "OK");
         }
 
         private void OnBorrowButtonClicked(object sender, EventArgs e)
