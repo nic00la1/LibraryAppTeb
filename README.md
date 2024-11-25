@@ -1,4 +1,4 @@
-# Library App Teb
+# Library App Teb 🥇
 ## Initial application state
 ![image](https://github.com/user-attachments/assets/d3312253-5daa-4c81-83da-f8757acc97ed)
 
